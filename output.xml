@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211026 22:16:46.403" rpa="false" schemaversion="2">
+<suite id="s1" name="Email" source="C:\Users\Maleski\OneDrive\Área de Trabalho\QA\luis.maleski_prime_experts\robot_comandos\email.robot">
+<test id="s1-t1" name="Cenario: teste criacao de email">
+<kw name="${test} Criar email luis antonio 21">
+<msg timestamp="20211026 22:16:46.430" level="FAIL">No keyword with name '${test} Criar email luis antonio 21' found.</msg>
+<status status="FAIL" starttime="20211026 22:16:46.430" endtime="20211026 22:16:46.430"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n</arg>
+<arg>imprimindo email:\n ${test}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211026 22:16:46.431" endtime="20211026 22:16:46.431"/>
+</kw>
+<status status="FAIL" starttime="20211026 22:16:46.429" endtime="20211026 22:16:46.431">No keyword with name '${test} Criar email luis antonio 21' found.</status>
+</test>
+<status status="FAIL" starttime="20211026 22:16:46.404" endtime="20211026 22:16:46.432"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Email">Email</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
