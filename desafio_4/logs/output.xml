@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211101 16:58:21.532" rpa="false" schemaversion="2">
+<suite id="s1" name="Desafio 4" source="C:\Users\Maleski\OneDrive\Área de Trabalho\QA\luis.maleski_prime_experts\desafio_4">
+<suite id="s1-s1" name="Desafio4" source="C:\Users\Maleski\OneDrive\Área de Trabalho\QA\luis.maleski_prime_experts\desafio_4\desafio4.robot">
+<test id="s1-s1-t1" name="Caso de Teste 04: Adicionar Cliente">
+<kw name="abrir navegador chrome" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211101 16:58:21.722" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211101 16:58:21.722" endtime="20211101 16:58:22.901"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:21.721" endtime="20211101 16:58:22.901"/>
+</kw>
+<kw name="Acessar a página home do site" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211101 16:58:22.904" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20211101 16:58:22.904" endtime="20211101 16:58:29.140"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:22.903" endtime="20211101 16:58:29.141"/>
+</kw>
+<kw name="Clicar em sign in" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.sign}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:29.142" endtime="20211101 16:58:29.167"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.sign}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:29.168" level="INFO">Clicking element '//a[@class='login'][contains(.,'Sign in')]'.</msg>
+<status status="PASS" starttime="20211101 16:58:29.167" endtime="20211101 16:58:32.151"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:29.141" endtime="20211101 16:58:32.151"/>
+</kw>
+<kw name="informar um maleskiiisucessfull@email.com válido" library="resource" sourcename="informar um ${email} válido">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.informar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:32.152" endtime="20211101 16:58:32.171"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.informar}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:32.172" level="INFO">Typing text 'maleskiiisucessfull@email.com' into text field '//input[@id="email_create"]'.</msg>
+<status status="PASS" starttime="20211101 16:58:32.171" endtime="20211101 16:58:32.229"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:32.151" endtime="20211101 16:58:32.229"/>
+</kw>
+<kw name="Clicar em &quot;Create an account&quot;" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.e_mail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:32.229" endtime="20211101 16:58:32.243"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.e_mail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:32.243" level="INFO">Clicking element '//button[@id='SubmitCreate']'.</msg>
+<status status="PASS" starttime="20211101 16:58:32.243" endtime="20211101 16:58:32.275"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:32.229" endtime="20211101 16:58:32.275"/>
+</kw>
+<kw name="Preencher os dados obrigatórios" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.first_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:32.276" endtime="20211101 16:58:34.732"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.first_name}</arg>
+<arg>${dados.nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:34.733" level="INFO">Typing text 'luis' into text field '//input[contains(@id,'customer_firstname')]'.</msg>
+<status status="PASS" starttime="20211101 16:58:34.732" endtime="20211101 16:58:34.785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.last_name}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:34.785" endtime="20211101 16:58:34.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.last_name}</arg>
+<arg>${dados.sobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:34.800" level="INFO">Typing text 'Antonio Maleski' into text field '//input[@id='customer_lastname']'.</msg>
+<status status="PASS" starttime="20211101 16:58:34.799" endtime="20211101 16:58:34.861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:34.862" endtime="20211101 16:58:34.874"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.password}</arg>
+<arg>${dados.senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:34.876" level="INFO">Typing text 'admin123' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20211101 16:58:34.875" endtime="20211101 16:58:34.925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.address}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:34.925" endtime="20211101 16:58:34.939"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.address}</arg>
+<arg>${dados.residencia}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:34.940" level="INFO">Typing text 'Av Anniballe Ferrarini' into text field '//input[@id='address1']'.</msg>
+<status status="PASS" starttime="20211101 16:58:34.939" endtime="20211101 16:58:34.996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.city}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:34.996" endtime="20211101 16:58:35.013"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.city}</arg>
+<arg>${dados.cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.014" level="INFO">Typing text 'Campina Grande do sul' into text field '//input[@id='city']'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.013" endtime="20211101 16:58:35.076"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.state}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.076" endtime="20211101 16:58:35.313"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.state}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.314" level="INFO">Clicking element '//div[contains(@id,'state')]'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.313" endtime="20211101 16:58:35.351"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.state_select}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.351" endtime="20211101 16:58:35.368"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.state_select}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.369" level="INFO">Clicking element '//option[contains(.,'New Jersey')]'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.368" endtime="20211101 16:58:35.388"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.postal_code}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.388" endtime="20211101 16:58:35.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.postal_code}</arg>
+<arg>${dados.cep}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.403" level="INFO">Typing text '83430' into text field '//input[@id='postcode']'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.402" endtime="20211101 16:58:35.459"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.mobile_phone}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.459" endtime="20211101 16:58:35.472"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.mobile_phone}</arg>
+<arg>${dados.celular}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.473" level="INFO">Typing text '04112345678' into text field '//input[@id='phone_mobile']'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.472" endtime="20211101 16:58:35.528"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.address_ref}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.528" endtime="20211101 16:58:35.541"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${home.address_ref}</arg>
+<arg>${dados.alternativo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.542" level="INFO">Typing text 'addres@admin.com' into text field '//input[@id='alias']'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.541" endtime="20211101 16:58:35.597"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:32.276" endtime="20211101 16:58:35.597"/>
+</kw>
+<kw name="Submeter cadastro" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.finish}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:35.598" endtime="20211101 16:58:35.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.finish}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 16:58:35.614" level="INFO">Clicking element '//button[@id='submitAccount']'.</msg>
+<status status="PASS" starttime="20211101 16:58:35.613" endtime="20211101 16:58:36.925"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:35.598" endtime="20211101 16:58:36.925"/>
+</kw>
+<kw name="Conferir se o cadastro foi efetuado com sucesso" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.sucessfull}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 16:58:36.926" endtime="20211101 16:58:36.943"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:36.925" endtime="20211101 16:58:36.943"/>
+</kw>
+<status status="PASS" starttime="20211101 16:58:21.721" endtime="20211101 16:58:36.943"/>
+</test>
+<status status="PASS" starttime="20211101 16:58:21.553" endtime="20211101 16:58:36.944"/>
+</suite>
+<status status="PASS" starttime="20211101 16:58:21.533" endtime="20211101 16:58:36.945"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Desafio 4">Desafio 4</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Desafio4">Desafio 4.Desafio4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

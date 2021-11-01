@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211101 17:00:57.125" rpa="false" schemaversion="2">
+<suite id="s1" name="Desafio 3" source="C:\Users\Maleski\OneDrive\Área de Trabalho\QA\luis.maleski_prime_experts\desafio_3">
+<suite id="s1-s1" name="Desafio3" source="C:\Users\Maleski\OneDrive\Área de Trabalho\QA\luis.maleski_prime_experts\desafio_3\desafio3.robot">
+<test id="s1-s1-t1" name="Caso de Teste 03: Listar Produtos">
+<kw name="abrir navegador chrome" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211101 17:00:57.320" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211101 17:00:57.320" endtime="20211101 17:00:58.439"/>
+</kw>
+<status status="PASS" starttime="20211101 17:00:57.319" endtime="20211101 17:00:58.439"/>
+</kw>
+<kw name="Acessar a página home do site" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211101 17:00:58.440" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20211101 17:00:58.440" endtime="20211101 17:01:02.826"/>
+</kw>
+<status status="PASS" starttime="20211101 17:00:58.439" endtime="20211101 17:01:02.827"/>
+</kw>
+<kw name="Passar o mouse por cima da categoria &quot;Women&quot; no menu principal superior de categorias" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.women}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 17:01:02.829" endtime="20211101 17:01:02.867"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${home.women}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211101 17:01:02.867" endtime="20211101 17:01:03.140"/>
+</kw>
+<status status="PASS" starttime="20211101 17:01:02.828" endtime="20211101 17:01:03.140"/>
+</kw>
+<kw name="Clicar na sub categoria &quot;Summer Dresses&quot;" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home.summer_dresses}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 17:01:03.141" endtime="20211101 17:01:03.158"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.summer_dresses}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211101 17:01:03.159" level="INFO">Clicking element '//a[contains(@title,'Summer Dresses')]'.</msg>
+<status status="PASS" starttime="20211101 17:01:03.159" endtime="20211101 17:01:05.801"/>
+</kw>
+<status status="PASS" starttime="20211101 17:01:03.141" endtime="20211101 17:01:05.801"/>
+</kw>
+<kw name="Conferir se os produtos da sub-categoria &quot;summer Dresses foram mostrados na pagina&quot;" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${produtos.summer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211101 17:01:05.803" endtime="20211101 17:01:05.824"/>
+</kw>
+<status status="PASS" starttime="20211101 17:01:05.802" endtime="20211101 17:01:05.825"/>
+</kw>
+<status status="PASS" starttime="20211101 17:00:57.319" endtime="20211101 17:01:05.825"/>
+</test>
+<status status="PASS" starttime="20211101 17:00:57.147" endtime="20211101 17:01:05.826"/>
+</suite>
+<status status="PASS" starttime="20211101 17:00:57.126" endtime="20211101 17:01:05.827"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Desafio 3">Desafio 3</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Desafio3">Desafio 3.Desafio3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
